@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Js Project | if elseif condition</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="safwan">
+        <p v-if="name">This is my name</p>
+        <p v-else-if="age">This is my age</p>
+
+        <button @click="showName">Show Name | {{name}}</button>
+        <button @click="showAge">Show Age | {{age}}</button>
+    </div>
+
+    <script>
+        let app = new Vue({
+            el: '#safwan',
+            data: {
+                name: true,
+                age: true,
+            },
+            methods: {
+                showName() {
+                    this.name = !this.name;
+                },
+                showAge() {
+                    this.age = !this.age;
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
